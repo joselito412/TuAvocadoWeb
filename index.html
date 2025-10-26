@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
     <nav class="main-nav">
         <div class="nav-content-wrapper">
             <div class="nav-brand">
@@ -23,19 +22,20 @@
             <button class="btn-login">Log In</button>
         </div>
     </nav>
-
     <header class="section-hero" id="section1"> 
         <div class="content-wrapper hero-grid">
             <div class="hero-content-left"> 
                 <h1>Orientación legal profesional al alcance de tu bolsillo</h1>
-                <div class="image-placeholder main-character">Hombre 3D</div>
+                <img src="img/hombre3d.png" alt="Hombre 3D profesional, abogado digital" class="main-character large-hero-image">
+                <div class="hero-logo-identifier">
+                    <img src="img/logo.png" alt="AVO Logo Minimalista" class="avocado-logo-mini">
+                </div>
             </div>
             <div class="hero-image-right"> 
-                <div class="image-placeholder phone-chat">Celular Chat</div>
+                <img src="img/celular-chat.png" alt="Chat de orientación legal con asistente virtual" class="phone-chat">
             </div>
         </div>
     </header>
-
     <section class="section-features" id="section2"> 
         <div class="content-wrapper features-grid">
             <div class="features-text">
@@ -47,137 +47,134 @@
                 </div>
             </div>
             <div class="features-image-right">
-                <div class="image-placeholder secondary-phone">Celular Mujer 3D</div>
+                <img src="img/celular-mujer-3d.png" alt="Abogada profesional" class="secondary-phone">
             </div>
         </div>
     </section>
-
-    <section class="section-call-to-action" id="section3">
-        <div class="content-wrapper">
-            <h3>¿Buscas un abogado especializado?</h3>
-        </div>
-    </section>
-
     <section class="section-specialized" id="section4"> 
-        <div class="content-wrapper features-grid">
-            <div class="features-text">
-                <h4>Te conectamos con profesionales verificados</h4>
-                <div class="lawyer-list">
-                    <div class="image-placeholder lawyers-flags">Abogados y Banderas</div>
+        <div class="content-wrapper">
+            <h2 class="section-title-specialized">¿Buscas un abogado especializado?</h2>
+        </div>
+        <div class="content-wrapper lawyers-grid">
+            <div class="lawyers-text-container">
+                <div class="feature-box yellow-block">
+                    <p>Te conectamos con <strong>profesionales verificados</strong></p>
+                </div>
+                <div class="flag-identifier">
+                    <img src="img/colombia-flag.png" alt="Bandera de Colombia" class="flag-img">
                 </div>
             </div>
-            <div class="features-image-right">
-                <div class="image-placeholder secondary-phone">Mapa de Cobertura</div> 
+            <div class="lawyers-center-container">
+                <img src="img/fichas-abogados-apiladas.png" alt="Fichas de perfiles de abogados apilados de múltiples países" class="lawyers-fichas-apiladas-img">
+            </div>
+            <div class="lawyers-image-right">
+                 <img src="img/celular-mapa.png" alt="Celular mostrando mapa de cobertura legal en América" class="phone-map">
             </div>
         </div>
     </section>
-
     <section class="section-ia-automation" id="section5">
-        <div class="content-wrapper features-grid"> 
+        <div class="content-wrapper features-grid reverse-on-mobile"> 
             <div class="features-text">
                 <h3>Deja que la IA de Avocado se encargue del trabajo repetitivo</h3>
-                
                 <div class="ia-tasks">
-                    <p>Nuevas sentencias</p>
-                    <p>Derecho de petición</p>
-                    <p>Fajo de constancia</p>
+                    <div class="ia-task-item task-button">Nuevos contratos</div>
+                    <div class="ia-task-item task-button">Derecho de petición</div>
+                    <div class="ia-task-item task-button">PQR de consumidor</div>
+                    <i class="fas fa-arrows-alt-v automation-arrow"></i>
                 </div>
-                
                 <div class="case-tracking">
-                    <h4>Sigue tus casos en el tablero privado</h4>
-                    <div class="image-placeholder dashboard">Tablero de Seguimiento</div>
+                    <h4>Sigue tus casos en el Tablero privado</h4>
+                    <img src="img/dashboard-img.png" alt="Captura de pantalla del tablero de seguimiento de casos (Estilo Notion)" class="dashboard-img">
                 </div>
             </div>
             <div class="features-image-right">
-                <div class="image-placeholder secondary-phone">Hombre 3D IA</div> 
+                <img src="img/hombre-3d-ia.png" alt="Hombre 3D representando a la IA con interfaz futurista" class="secondary-phone">
             </div>
         </div>
     </section>
-
     <section class="section-subscriptions" id="section6">
         <div class="content-wrapper">
-            <h2>Suscripciones</h2>
-            
+            <h2>Elige el plan que se ajusta a tus necesidades</h2>
             <div class="plans-container">
                 <div class="plan free">
                     <h4 class="plan-title">Free</h4>
                     <p class="plan-subtitle">Orientación Legal</p>
-                    
                     <div class="plan-features">
-                        <div class="feature-item">
-                            <div class="avatar-placeholder"></div><span class="feature-text">1d</span>
+                        <div class="feature-item feature-with-avatar">
+                            <img src="img/avatar-free-1.png" alt="Avatar Free 1: AI Assistant" class="avatar-img-circle">
+                            <span class="feature-text time-text">1d</span>
                         </div>
-                        <div class="feature-item">
-                            <div class="avatar-placeholder"></div><span class="feature-text symbol">X</span>
+                        <div class="feature-item feature-with-avatar">
+                            <img src="img/avatar-free-2.png" alt="Avatar Free 2: Abogado" class="avatar-img-rounded">
+                            <span class="feature-text symbol-x">X</span>
                         </div>
                     </div>
-                    
                     <div class="plan-price-wrapper">
                         <p class="price-number">0</p>
+                        <span class="price-period">/mes</span>
                     </div>
                 </div>
-                
                 <div class="plan junior">
                     <h4 class="plan-title">Junior</h4>
                     <p class="plan-subtitle">Sin supervisión</p>
-                    
                     <div class="plan-features">
-                        <div class="feature-item">
-                            <div class="avatar-placeholder"></div><span class="feature-text">24hs</span>
+                        <div class="feature-item feature-with-avatar">
+                            <img src="img/avatar-junior-1.png" alt="Avatar Junior 1: AI Assistant" class="avatar-img-circle">
+                            <span class="feature-text time-text">24hs</span>
                         </div>
-                        <div class="feature-item">
-                            <div class="avatar-placeholder"></div><span class="feature-text symbol">X</span>
+                        <div class="feature-item feature-with-avatar">
+                            <img src="img/avatar-junior-2.png" alt="Avatar Junior 2: Abogado" class="avatar-img-rounded">
+                            <span class="feature-text symbol-x">X</span>
                         </div>
                     </div>
-
                     <div class="plan-price-wrapper">
-                         <div class="currency-placeholder">($)</div><p class="price-number">15</p>
+                         <div class="currency-placeholder currency-green">($)</div>
+                         <p class="price-number">15</p>
+                         <span class="price-period">/mes</span>
                     </div>
                 </div>
-                
                 <div class="plan senior">
                     <h4 class="plan-title">Senior</h4>
                     <p class="plan-subtitle">Supervisado</p>
-                    
                     <div class="plan-features">
-                        <div class="feature-item">
-                            <div class="avatar-placeholder"></div><span class="feature-text">24hs</span>
+                        <div class="feature-item feature-with-avatar">
+                            <img src="img/avatar-senior-1.png" alt="Avatar Senior 1: Abogado Supervisado" class="avatar-img-circle">
+                            <span class="feature-text time-text">24hs</span>
                         </div>
-                        <div class="feature-item">
-                            <div class="avatar-placeholder"></div><span class="feature-text-blue">Consultas Personalizadas</span>
+                        <div class="feature-item feature-with-avatar">
+                            <img src="img/avatar-senior-2.png" alt="Avatar Senior 2: Abogado Especializado" class="avatar-img-rounded">
+                            <span class="feature-text text-blue">Consultas Personalizadas</span>
                         </div>
                     </div>
-                    
                     <div class="plan-price-wrapper">
-                        <div class="currency-placeholder">($)</div><p class="price-number">100</p>
+                        <p class="price-number">100</p>
+                        <div class="currency-placeholder currency-blue">($)</div>
+                        <span class="price-period">/mes</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <section class="section-online-consultancy" id="section7">
-        <div class="content-wrapper">
-            <h2>Consultorio Jurídico On-line</h2>
-            
-            <div class="consultancy-box">
-                <div class="search-input-wrapper">
-                    <span class="search-icon">🔍</span>
-                    <input type="text" placeholder="¿Dime en que te puedo ayudar?">
-                </div>
-                
-                <p class="chat-ai-reference">Chat AI → En clave de conversación de PROFESOR (categoría de servicio legal && automatización relacionada)</p>
-                
-                <div class="archive-button-wrapper">
-                    <span class="archive-icon">➕</span>
-                    <button class="archive-button">Archivos</button>
+        <div class="consultancy-background">
+            <div class="content-wrapper">
+                <h2 style="color: var(--color-black);">Consultorio Jurídico On-line</h2>
+                <div class="search-frame-container">
+                    <div class="search-box-new primary-search-box">
+                        <button class="search-icon-btn"><i class="fas fa-search"></i></button>
+                        <input type="text" placeholder="¿Dime en qué te puedo ayudar?">
+                    </div>
+                    <p class="search-context-text">
+                        Chat AI $\rightarrow$ En clave de conversación de <strong>PROFESOR</strong> (categoría de servicio legal $\& \&$ automatización relacionada)
+                    </p>
+                    <button class="btn-files">
+                        <i class="fas fa-plus-circle"></i> Archivos
+                    </button>
+                    <img src="img/ilustracion-consultorio.png" alt="Ilustración de escritorio de consultorio legal, oficina moderna" class="consultancy-bg-img">
                 </div>
             </div>
-            
-            <div class="image-placeholder desktop-illustration">Ilustración Consultorio</div>
         </div>
     </section>
-
     <section class="section-blog" id="section8">
         <div class="content-wrapper">
             <h2>Blog legal-TECH</h2>
@@ -196,14 +193,12 @@
             <button class="btn-primary">Ver todos los artículos</button>
         </div>
     </section>
-
     <section class="section-social-impact" id="section9">
         <div class="content-wrapper">
             <h2>Aporte social-ambiental</h2>
             <div class="image-placeholder impact-illustration">Ilustración Social</div>
         </div>
     </section>
-
     <footer>
         <div class="footer-strip top-strip">
             <div class="content-wrapper footer-grid-1">
@@ -221,7 +216,6 @@
                 </div>
             </div>
         </div>
-
         <div class="footer-strip middle-strip">
             <div class="content-wrapper footer-grid-2">
                 <p class="footer-link-title large">Sobre nosotros ⇧</p>
@@ -231,14 +225,12 @@
                 </div>
             </div>
         </div>
-        
         <div class="footer-strip bottom-strip">
             <div class="content-wrapper footer-grid-3">
-                <div class="footer-logo">Avocado 📝</div> 
-                <p class="copyright">&copy; 2024 - 2025, **AVOCADO**. All right reserved.</p>
+                <img src="img/logo.png" alt="AVO Logo" class="footer-logo-img"> 
+                <p class="copyright">&copy; 2024 - 2025, <strong>AVOCADO</strong>. All right reserved.</p>
             </div>
         </div>
     </footer>
-
 </body>
 </html>
