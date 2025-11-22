@@ -105,12 +105,20 @@ h3 { font-size: 1.8rem; margin-bottom: 1rem; }
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 20px 30px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.avocado-logo-img { height: 50px; width: auto; }
+.avocado-logo-img { 
+    height: 100px; 
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.avocado-logo-img:hover {
+    transform: scale(1.05);
+}
 
 .nav-links {
     display: flex; /* Changed from none to flex for navigation */
@@ -1094,3 +1102,17 @@ h3 { font-size: 1.8rem; margin-bottom: 1rem; }
     cursor: pointer;
 }
 
+/* TEAM MEMBER CARD HOVER */
+.team-member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* FOOTER LINK HOVERS */
+footer a:hover {
+    color: var(--color-primary) !important;
+}
+
+footer .fab:hover {
+    transform: scale(1.2);
+}

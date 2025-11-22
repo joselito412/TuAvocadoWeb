@@ -1,10 +1,13 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import HomePage from './pages/HomePage';
 import WhatWeDoPage from './pages/WhatWeDoPage';
 import PersonasPage from './pages/PersonasPage';
+import AboutPage from './pages/AboutPage';
+import LegalPage from './pages/LegalPage';
 
 function App() {
   return (
@@ -15,13 +18,11 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/que-hacemos" element={<WhatWeDoPage />} />
         <Route path="/personas" element={<PersonasPage />} />
+        <Route path="/sobre-nosotros" element={<AboutPage />} />
+        <Route path="/legal" element={<LegalPage />} />
       </Routes>
 
-      <footer>
-        <div className="content-wrapper">
-          <p className="copyright">&copy; 2024 - 2025, <strong>AVOCADO</strong>. All right reserved.</p>
-        </div>
-      </footer>
+      <Footer />
 
       <WhatsAppButton />
     </>
