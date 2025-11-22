@@ -99,7 +99,7 @@ export const PhoneDocs = () => (
 export const PhoneDashboard = () => (
   <div style={screenStyle}>
     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
-       <img src="/img/tablero-seguimiento.png" alt="Icon" style={{ width: '24px', height: '24px' }} />
+       <img src={`${import.meta.env.BASE_URL}img/tablero-seguimiento.png`} alt="Icon" style={{ width: '24px', height: '24px' }} />
        <h3 style={{ ...headerStyle, marginBottom: 0, fontSize: '1rem' }}>Tablero de Casos</h3>
     </div>
     
@@ -140,7 +140,7 @@ export const PhoneLawyers = () => (
     <h3 style={headerStyle}>Especialistas</h3>
     
     <div style={{ display: 'flex', gap: '10px', marginBottom: '15px', overflowX: 'auto' }}>
-       <img src="/img/lawyers-flags.png" alt="Flags" style={{ height: '20px', objectFit: 'contain' }} />
+       <img src={`${import.meta.env.BASE_URL}img/lawyers-flags.png`} alt="Flags" style={{ height: '20px', objectFit: 'contain' }} />
        {/* Fallback si la imagen combinada no es ideal, usaríamos banderas individuales */}
     </div>
     
@@ -169,30 +169,96 @@ export const PhoneLawyers = () => (
 );
 
 // --- PANTALLA 5: PRICING ---
-export const PhonePricing = () => (
-  <div style={screenStyle}>
-    <h3 style={headerStyle}>Mejora tu Plan</h3>
-    
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', height: '100%', justifyContent: 'center' }}>
-      <div style={{ padding: '15px', border: '2px solid #eee', borderRadius: '12px', opacity: 0.6 }}>
-        <div style={{ fontWeight: 'bold' }}>Free</div>
-        <div style={{ fontSize: '0.8rem' }}>Básico</div>
-      </div>
-      
-      <div style={{ padding: '15px', border: '2px solid #2E7D32', borderRadius: '12px', backgroundColor: '#E8F5E9', position: 'relative' }}>
-        <div style={{ position: 'absolute', top: '-10px', right: '10px', background: '#2E7D32', color: 'white', fontSize: '0.6rem', padding: '2px 8px', borderRadius: '10px' }}>RECOMENDADO</div>
-        <div style={{ fontWeight: 'bold', color: '#2E7D32' }}>Junior</div>
-        <div style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>$15<span style={{ fontSize: '0.8rem', fontWeight: 'normal' }}>/mes</span></div>
-        <ul style={{ fontSize: '0.7rem', paddingLeft: '15px', marginTop: '5px' }}>
-          <li>IA Ilimitada</li>
-          <li>Sin supervisión</li>
-        </ul>
-      </div>
-      
-      <div style={{ padding: '15px', border: '2px solid #1565C0', borderRadius: '12px' }}>
-        <div style={{ fontWeight: 'bold', color: '#1565C0' }}>Senior</div>
-        <div style={{ fontSize: '0.8rem' }}>Supervisado</div>
+export function PhonePricing() {
+  return (
+    <div className="phone-screen">
+      <div style={{ 
+        padding: '20px', 
+        textAlign: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        height: '100%',
+        justifyContent: 'space-between'
+      }}>
+        <div>
+          <h3 style={{ fontSize: '1.1rem', marginBottom: '15px', color: 'var(--color-primary)' }}>
+            Tu Abogado de Bolsillo
+          </h3>
+          
+          <div style={{ 
+            background: 'white', 
+            borderRadius: '16px', 
+            padding: '20px',
+            marginBottom: '20px',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+          }}>
+            <img 
+              src={`${import.meta.env.BASE_URL}img/Gob. Corporativo (2).png`} 
+              alt="Abogado de Bolsillo" 
+              style={{ 
+                width: '100%', 
+                height: 'auto',
+                borderRadius: '12px',
+                marginBottom: '15px'
+              }} 
+            />
+            <p style={{ fontSize: '0.85rem', color: '#666', lineHeight: '1.4' }}>
+              Asesoría legal profesional siempre contigo
+            </p>
+          </div>
+        </div>
+
+        <div style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(3, 1fr)', 
+          gap: '10px',
+          marginTop: '20px'
+        }}>
+          <div style={{ 
+            background: '#E8F5E9', 
+            padding: '15px 10px', 
+            borderRadius: '12px',
+            textAlign: 'center'
+          }}>
+            <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--color-primary)' }}>
+              Free
+            </div>
+            <div style={{ fontSize: '0.7rem', color: '#666', marginTop: '5px' }}>
+              $0
+            </div>
+          </div>
+          
+          <div style={{ 
+            background: 'var(--color-primary)', 
+            padding: '15px 10px', 
+            borderRadius: '12px',
+            textAlign: 'center',
+            transform: 'scale(1.05)',
+            boxShadow: '0 4px 8px rgba(46, 125, 50, 0.3)'
+          }}>
+            <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'white' }}>
+              Junior
+            </div>
+            <div style={{ fontSize: '0.7rem', color: 'white', marginTop: '5px' }}>
+              $15
+            </div>
+          </div>
+          
+          <div style={{ 
+            background: '#E3F2FD', 
+            padding: '15px 10px', 
+            borderRadius: '12px',
+            textAlign: 'center'
+          }}>
+            <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--color-secondary)' }}>
+              Senior
+            </div>
+            <div style={{ fontSize: '0.7rem', color: '#666', marginTop: '5px' }}>
+              $100
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+}

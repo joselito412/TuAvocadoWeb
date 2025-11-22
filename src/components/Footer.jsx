@@ -18,7 +18,7 @@ function Footer() {
         }}>
           {/* Column 1: Brand */}
           <div>
-            <img src="/img/logo.png" alt="Avocado Logo" style={{ height: '60px', marginBottom: '20px' }} />
+            <img src={`${import.meta.env.BASE_URL}img/logo.png`} alt="Avocado Logo" style={{ height: '60px', marginBottom: '20px' }} />
             <p style={{ fontSize: '0.95rem', color: '#ccc', lineHeight: '1.6' }}>
               Tu abogado de bolsillo. Orientación legal profesional impulsada por IA, accesible 24/7.
             </p>

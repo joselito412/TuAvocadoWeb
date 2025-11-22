@@ -25,7 +25,7 @@ function HomePage() {
               <p className="lead-text">El futuro legal, simplificado y accesible desde tu celular.</p>
 
               <div style={{ marginTop: '30px' }}>
-                 <img src="/img/hombre3d.png" alt="Asistente Virtual" style={{ maxWidth: '100%', height: 'auto', maxHeight: '300px', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.1))' }} />
+                 <img src={`${import.meta.env.BASE_URL}img/hombre3d.png`} alt="Asistente Virtual" style={{ maxWidth: '100%', height: 'auto', maxHeight: '300px', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.1))' }} />
               </div>
             </div>
             <div className="mobile-phone-display">

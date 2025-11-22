@@ -9,7 +9,7 @@ function Navigation() {
       <div className="nav-content-wrapper">
         <div className="nav-brand">
           <Link to="/">
-            <img src="/img/logo.png" alt="AVO Logo" className="avocado-logo-img" />
+            <img src={`${import.meta.env.BASE_URL}img/logo.png`} alt="AVO Logo" className="avocado-logo-img" />
           </Link>
         </div>
         <ul className="nav-links">
