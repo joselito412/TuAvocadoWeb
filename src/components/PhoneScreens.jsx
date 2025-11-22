@@ -24,7 +24,6 @@ const headerStyle = {
 export const PhoneHome = () => (
   <div style={screenStyle}>
     <div style={{ textAlign: 'center', marginTop: '20px' }}>
-      <img src="/img/logo.png" alt="Logo" style={{ width: '60px', margin: '0 auto 10px' }} />
       <h3 style={headerStyle}>Hola, Usuario</h3>
     </div>
     
@@ -41,8 +40,25 @@ export const PhoneHome = () => (
       <p style={{ fontSize: '0.8rem', margin: 0 }}>Asistencia legal inmediata 24/7</p>
     </div>
 
-    <div style={{ marginTop: 'auto', marginBottom: '20px' }}>
-      <div style={{ backgroundColor: '#F5F5F5', padding: '10px', borderRadius: '8px', marginBottom: '10px' }}>
+    <div style={{ marginTop: 'auto', marginBottom: '20px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+      <button style={{ 
+        background: '#FF6D00', 
+        color: 'white', 
+        border: 'none', 
+        padding: '12px', 
+        borderRadius: '25px', 
+        fontWeight: 'bold', 
+        cursor: 'pointer',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '8px',
+        boxShadow: '0 4px 10px rgba(255, 109, 0, 0.3)'
+      }}>
+        <i className="fas fa-comment-dots"></i> Habla con tu Avocado
+      </button>
+
+      <div style={{ backgroundColor: '#F5F5F5', padding: '10px', borderRadius: '8px' }}>
         <i className="fas fa-search"></i> Buscar servicio...
       </div>
     </div>
@@ -79,47 +95,66 @@ export const PhoneDocs = () => (
   </div>
 );
 
-// --- PANTALLA 3: DASHBOARD ---
+// --- PANTALLA 3: DASHBOARD (NOTION STYLE) ---
 export const PhoneDashboard = () => (
   <div style={screenStyle}>
-    <h3 style={headerStyle}>Tablero de Casos</h3>
+    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
+       <img src="/img/tablero-seguimiento.png" alt="Icon" style={{ width: '24px', height: '24px' }} />
+       <h3 style={{ ...headerStyle, marginBottom: 0, fontSize: '1rem' }}>Tablero de Casos</h3>
+    </div>
     
-    <div style={{ marginBottom: '20px' }}>
-      <div style={{ fontSize: '0.8rem', color: '#666' }}>Casos Activos</div>
-      <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#2E7D32' }}>3</div>
+    <div style={{ marginBottom: '15px', padding: '10px', background: '#F7F6F3', borderRadius: '6px', borderLeft: '3px solid #2E7D32' }}>
+      <div style={{ fontSize: '0.7rem', color: '#666', marginBottom: '4px' }}>PROYECTO ACTIVO</div>
+      <div style={{ fontWeight: 'bold', fontSize: '0.9rem' }}>Demanda Laboral SAS</div>
+      <div style={{ display: 'flex', gap: '5px', marginTop: '8px' }}>
+         <span style={{ fontSize: '0.6rem', background: '#E3F2FD', padding: '2px 6px', borderRadius: '4px', color: '#1565C0' }}>En Proceso</span>
+         <span style={{ fontSize: '0.6rem', background: '#FFEBEE', padding: '2px 6px', borderRadius: '4px', color: '#C62828' }}>Urgente</span>
+      </div>
     </div>
 
-    <div style={{ display: 'flex', gap: '10px', overflowX: 'auto', paddingBottom: '10px' }}>
-      <div style={{ minWidth: '120px', background: '#FFF3E0', padding: '10px', borderRadius: '8px' }}>
-        <div style={{ fontSize: '0.7rem', color: '#EF6C00' }}>En Proceso</div>
-        <div style={{ fontWeight: 'bold' }}>Multa Tránsito</div>
-        <div style={{ height: '4px', background: '#FFE0B2', marginTop: '5px', borderRadius: '2px' }}>
-          <div style={{ width: '60%', height: '100%', background: '#EF6C00', borderRadius: '2px' }}></div>
-        </div>
-      </div>
-      <div style={{ minWidth: '120px', background: '#E3F2FD', padding: '10px', borderRadius: '8px' }}>
-        <div style={{ fontSize: '0.7rem', color: '#1565C0' }}>Revisión</div>
-        <div style={{ fontWeight: 'bold' }}>Contrato Laboral</div>
-      </div>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+       <div style={{ fontSize: '0.7rem', color: '#999', textTransform: 'uppercase', letterSpacing: '1px' }}>Pendientes</div>
+       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.8rem' }}>
+          <input type="checkbox" checked readOnly /> <span>Revisar cláusulas contrato</span>
+       </div>
+       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.8rem' }}>
+          <input type="checkbox" /> <span>Subir evidencia fotográfica</span>
+       </div>
+       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.8rem' }}>
+          <input type="checkbox" /> <span>Firmar poder autenticado</span>
+       </div>
     </div>
-    
-    <img src="/img/dashboard-img.png" alt="Graph" style={{ width: '100%', marginTop: '20px', opacity: 0.8, borderRadius: '8px' }} />
+
+    <div style={{ marginTop: 'auto', borderTop: '1px solid #eee', paddingTop: '10px' }}>
+       <div style={{ fontSize: '0.7rem', color: '#666' }}>Progreso General</div>
+       <div style={{ height: '6px', background: '#eee', borderRadius: '3px', marginTop: '5px', overflow: 'hidden' }}>
+          <div style={{ width: '65%', height: '100%', background: '#2E7D32' }}></div>
+       </div>
+    </div>
   </div>
 );
 
-// --- PANTALLA 4: ABOGADOS (MARKETPLACE) ---
+// --- PANTALLA 4: ABOGADOS (MARKETPLACE + BANDERAS) ---
 export const PhoneLawyers = () => (
   <div style={screenStyle}>
     <h3 style={headerStyle}>Especialistas</h3>
     
+    <div style={{ display: 'flex', gap: '10px', marginBottom: '15px', overflowX: 'auto' }}>
+       <img src="/img/lawyers-flags.png" alt="Flags" style={{ height: '20px', objectFit: 'contain' }} />
+       {/* Fallback si la imagen combinada no es ideal, usaríamos banderas individuales */}
+    </div>
+    
     <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
       {[
-        { name: 'Dr. Juan Pérez', spec: 'Laboral', stars: 4.8, img: '/img/avatar-senior-1.png' },
-        { name: 'Dra. Ana Gómez', spec: 'Familia', stars: 4.9, img: '/img/avatar-senior-2.png' },
-        { name: 'Dr. Carlos Ruiz', spec: 'Penal', stars: 4.7, img: '/img/avatar-junior-2.png' }
+        { name: 'Dr. Juan Pérez', spec: 'Laboral', stars: 4.8, img: '/img/avatar-senior-1.png', country: '🇨🇴' },
+        { name: 'Dra. Ana Gómez', spec: 'Familia', stars: 4.9, img: '/img/avatar-senior-2.png', country: '🇺🇸' },
+        { name: 'Dr. Carlos Ruiz', spec: 'Penal', stars: 4.7, img: '/img/avatar-junior-2.png', country: '🇨🇴' }
       ].map((lawyer, i) => (
         <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', paddingBottom: '10px', borderBottom: '1px solid #f0f0f0' }}>
-          <img src={lawyer.img} alt={lawyer.name} style={{ width: '40px', height: '40px', borderRadius: '50%', objectFit: 'cover' }} />
+          <div style={{ position: 'relative' }}>
+             <img src={lawyer.img} alt={lawyer.name} style={{ width: '40px', height: '40px', borderRadius: '50%', objectFit: 'cover' }} />
+             <span style={{ position: 'absolute', bottom: 0, right: -2, fontSize: '0.8rem' }}>{lawyer.country}</span>
+          </div>
           <div style={{ flex: 1 }}>
             <div style={{ fontWeight: 'bold', fontSize: '0.9rem' }}>{lawyer.name}</div>
             <div style={{ fontSize: '0.7rem', color: '#666' }}>{lawyer.spec}</div>
